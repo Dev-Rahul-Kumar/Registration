@@ -2,7 +2,22 @@
     margin: 20px;
     width: 100%;
 }
+.formdetail .forum{
+    width: 90rem;
+    border: 1px solid black;
+    margin:auto;
+}
 .formdetail .headerline{
     margin-top: 10px;
     background: rgba(39, 33, 33, 0.925);
 }
+h4{
+    text-decoration: underline;
+}
+.formdetail .forum .gap{
+    margin-bottom: 15px;
+}
+input{
+    margin-left: 5px;
+}
+
