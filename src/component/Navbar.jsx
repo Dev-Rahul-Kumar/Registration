@@ -4,7 +4,7 @@ import './Style/nav.css'
 export default function Navbar() {
   return (
     <>
-      <navbar className="nav">
+      <nav className="nav">
         <div className="header">
             <h1><a href="/">Registration Portal</a></h1>
           
@@ -16,7 +16,7 @@ export default function Navbar() {
             
           </ul>
         </div>
-      </navbar>
+      </nav>
     </>
   );
 }
