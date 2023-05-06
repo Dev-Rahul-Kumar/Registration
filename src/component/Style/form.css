@@ -15,9 +15,9 @@ h4{
     text-decoration: underline;
     margin-bottom: 10px;
 }
-.formdetail .forum .gap{
+/* .formdetail .forum .gap{
     margin-bottom: 15px;
-}
+} */
 input{
     margin-left: 20px;
     margin-right: 20px;
@@ -69,10 +69,33 @@ button{
     letter-spacing: 3px;
    
 }
+.forum .cancel:hover{
+    background-color: red;
+    color: white;
+}
 .forum .submit{
     margin-right: 60px;
     margin-left: 20px;
     background-color: rgb(1, 185, 1);
     color: white;
     letter-spacing: 3px;
+}
+.gap{
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+.gap .width{
+    border: 1px solid red;
+    width: 420px;
+    height: 50px;
+}
+.gap .width .size{
+    width: 100px;
+    height: 25px;
 }
