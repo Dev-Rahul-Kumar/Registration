@@ -28,7 +28,7 @@ export default function FormDetail() {
         const response = await axios.post(`${url}`, data);
         console.log(response);
         alert("Registration Successful");
-        navigate("/register-data");
+        navigate('register-data');
       } catch (error) {
         console.log(error);
       }

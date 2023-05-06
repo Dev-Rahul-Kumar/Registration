@@ -24,45 +24,43 @@ export default function Datatable() {
     apidata();
     const exampleTable = tableRef.current;
 
-    console.log(info);
-    if(info.length>0 && !datatableref.current){
-    datatableref.current = new DataTables(exampleTable, {
-      data:info,
-      columns: [
-        { title: "Name" },
-        { title: "DOB" },
-        { title: "sex" },
-        { title: "Mobile" },
-        { title: "Address" },
-        { title: "Govt id" },
-        { title: "Guardian" },
-        { title: "Guardian Name" },
-        { title: "Nationality" },
-      ],
-    })};
-    return () => {
-      if (datatableref.current) {
-        datatableref.current.destroy();
-        datatableref.current = null;
-      }
-    };
+    
+    if (info.length > 0 && !datatableref.current) {
+      datatableref.current = new DataTables(exampleTable, {
+        columns: [
+          { title: "Name" },
+          { title: "DOB" },
+          { title: "sex" },
+          { title: "Mobile" },
+          { title: "Address" },
+          { title: "Govt id" },
+          { title: "Guardian" },
+          { title: "Guardian Name" },
+          { title: "Nationality" },
+        ],
+      });
+    }
+     
+    
+    
+   
   };
 
   useEffect(() => {
     datatable();
-  }, []);
+  }, [ ]);
 
   return (
     <>
-      <div className="header">
-        <h1>All Register Candidate</h1>
+      <div className="header" style={{padding:'15px'}} >
+        <h1 style={{textAlign:'center'}}>All Register Candidate</h1>
         <table
           id="example"
           ref={tableRef}
           className="display"
           style={{ width: "100%" }}
         >
-          <thead>
+          <thead style={{background:"#6bc784", color:"white"}}>
             <tr>
               <th>Name</th>
               <th>DOB</th>
@@ -75,33 +73,9 @@ export default function Datatable() {
               <th>Nationality</th>
             </tr>
           </thead>
-        </table>
-      </div>
-    </>
-  );
-}
-
-// {
-//   data: info,
-
-//   columns: [
-//     { title: "Name" },
-//     { title: "DOB" },
-//     { title: "sex" },
-//     { title: "Mobile" },
-//     { title: "Address" },
-//     { title: "Govt id" },
-//     { title: "Guardian" },
-//     { title: "Guardian Name" },
-//     { title: "Nationality" },
-//   ],
-// }
-
-{
-  /* <tbody>
-            {info?.map((user,key) => (
-
-              <tr key={user.id}>
+          <tbody>
+            {info.map((user,id) => (
+              <tr key={id}>
                 <td>{user.name}</td>
                 <td>{user.DOB}</td>
                 <td>{user.sex}</td>
@@ -113,5 +87,10 @@ export default function Datatable() {
                 <td>{user.Nationality}</td>
               </tr>
             ))}
-          </tbody> */
+          </tbody>
+        </table>
+      </div>
+    </>
+  );
 }
+
